@@ -1,0 +1,22 @@
+
+
+    클래스의 메서드를 사용하는방법
+    쉽게 말하자면 메서드는 기능을 수행하는 함수다
+
+    클래스안에 멤버변수를 선언해준다
+    private String meetingRoom;
+
+    Meeting 메서드를 만든다 매개변수로는 int형 id에 값이 들어간다
+    외부클래스에서 사용할겨우 객체생성을해야함
+
+    public Meeting(int id) {
+
+        멤버변수            매개변수
+        this.meetingRoom = meetingRoom;
+
+        왼쪽의 this.meetingRoom → 클래스 안에 있는 변수
+        오른쪽의 meetingRoom → 생성자에 전달받은 변수
+
+        내 객체의 meetingRoom 필드에, 생성자(또는 메서드)에서 전달받은 meetingRoom 값을 넣는다
+
+    }
