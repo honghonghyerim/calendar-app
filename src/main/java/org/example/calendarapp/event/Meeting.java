@@ -34,4 +34,9 @@ public class Meeting extends AbstractEvent { //AbstractEvent 상속받는 클래
     public void print() { //출력하는메서드 이걸 호출하면 아래 출력물이나옴
         System.out.printf("[회의] %s : %s%n", getTitle(),agenda);
     }
+
+    @Override
+    public boolean support(EventType type) { //매개변수의 타입이
+        return type == EventType.MEETING; // 이벤트타입이 미팅이면 true 아니면 false
+    }
 }

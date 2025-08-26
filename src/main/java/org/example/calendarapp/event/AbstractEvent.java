@@ -54,4 +54,12 @@ public abstract class AbstractEvent implements Event {
         return this.title;
     }
 
+
+    public ZonedDateTime getStartAt() {
+        return startAt;
+    }
+
+    public ZonedDateTime getEndAt() {
+        return endAt;
+    }
 }
