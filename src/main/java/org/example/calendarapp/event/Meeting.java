@@ -1,5 +1,8 @@
 package org.example.calendarapp.event;
 
+import org.example.calendarapp.event.update.AbstractAuditableEvent;
+import org.example.calendarapp.event.update.UpdateMeeting;
+
 import java.time.ZonedDateTime;
 import java.util.Set;
 
@@ -38,5 +41,14 @@ public class Meeting extends AbstractEvent { //AbstractEvent 상속받는 클래
     @Override
     public boolean support(EventType type) { //매개변수의 타입이
         return type == EventType.MEETING; // 이벤트타입이 미팅이면 true 아니면 false
+    }
+
+    @Override
+    protected void update(AbstractAuditableEvent update) {
+        UpdateMeeting meetingUpdate = (UpdateMeeting) update;
+
+        this.participants = meetingUpdate.getParticipants();
+        this.meetingRoom = meetingUpdate.getMeetingRoom();
+        this.agenda = meetingUpdate.getAgenda();
     }
 }

@@ -26,5 +26,15 @@ public class Foreach {
                 .forEach(System.out::println);
 
 
+        //ABC 에서 B는 제거하고 긱 element 에 Hi 를 붙여서 출력해라
+        String[] arrayOfString = {"A", "B", "C"};
+        Arrays.stream(arrayOfString)
+                .filter(name -> !name.equals("B"))
+                .map(name -> "Hi, "+ name)
+                .forEach(System.out::println);
+
+
+
+
     }
 }

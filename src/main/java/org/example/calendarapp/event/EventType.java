@@ -7,6 +7,4 @@ public enum EventType {
     NO_DISTURBANCE,
     OUT_OF_OFFICE
     ;
-
-
 }
